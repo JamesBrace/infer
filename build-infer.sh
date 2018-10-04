@@ -144,7 +144,7 @@ opam_retry () {
 }
 
 setup_opam () {
-    opam_retry opam init --compiler="$OCAML_VERSION" -j "$JOBS" --no-setup
+    opam_retry opam init --comp="$OCAML_VERSION" -j "$JOBS" --no-setup
     if [ "$INFER_OPAM_SWITCH" = "$INFER_OPAM_SWITCH_DEFAULT" ]; then
         opam_retry opam switch set -j "$JOBS" "$INFER_OPAM_SWITCH" --alias-of "$OCAML_VERSION"
     else
